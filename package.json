@@ -1,0 +1,21 @@
+{
+  "name": "elisa-network-service-operations-pipeline",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "packages/*",
+    "tools/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspace @elisa-training/event-contract",
+    "typecheck": "npm run typecheck --workspace @elisa-training/event-contract && npm run typecheck --workspace @elisa-training/ticket-generator",
+    "test": "vitest run",
+    "generate:tickets": "tsx tools/ticket-generator/src/index.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0",
+    "vitest": "^3.2.0"
+  }
+}

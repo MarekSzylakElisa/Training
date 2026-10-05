@@ -1,0 +1,21 @@
+# Build output
+node_modules/
+target/
+build/
+out/
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+
+# Logs and OS files
+*.log
+.DS_Store
+.docs/
+Thumbs.db
